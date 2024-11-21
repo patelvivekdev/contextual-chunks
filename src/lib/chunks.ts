@@ -4,6 +4,9 @@ import { google } from '@ai-sdk/google';
 import { generateObject } from 'ai';
 import { z } from 'zod';
 
+// You can use other Providers like OpenAI, Anthropic.
+// Read more: https://sdk.vercel.ai/providers/ai-sdk-providers
+
 export async function createContextualPrompts(document: string, chunks: string[]) {
   const prompts = [];
   for (const chunk of chunks) {
@@ -14,11 +17,9 @@ export async function createContextualPrompts(document: string, chunks: string[]
 
 // Generate contextual chunks
 export async function generateContextualChunks(prompts: string[]) {
-  console.log('Generating contextual chunks...', prompts.length);
-
   try {
-    // generate only 10 chunks
-    const testPrompts = prompts.slice(0, 10);
+    // generate only 5 chunks
+    const testPrompts = prompts.slice(0, 5);
 
     const contextualChunks = [];
 

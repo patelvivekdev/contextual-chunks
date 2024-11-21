@@ -24,7 +24,7 @@ export async function POST(req: Request) {
     const buffer = Buffer.from(arrayBuffer);
     const pdfContent = await getPdfContentFromBuffer(buffer);
 
-    // Generate text chunks
+    // Generate text chunks from PDF content
     const textSplitter = new RecursiveCharacterTextSplitter({
       chunkSize: 300,
       chunkOverlap: 30,

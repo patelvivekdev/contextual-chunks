@@ -59,8 +59,7 @@ export default function Home() {
         <CardHeader>
           <CardTitle>Contextual Chunks Generator</CardTitle>
           <CardDescription>
-            Upload a PDF to generate contextual chunks (Generate Only 10 chunks with free Google
-            LLM)
+            Upload a PDF to generate contextual chunks (Generate Only 5 chunks with Gemini model).
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
